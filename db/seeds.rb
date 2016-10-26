@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+phase1 = Phase.create(number: 1)
+phase2 = Phase.create(number: 2)
+phase3 = Phase.create(number: 3)
