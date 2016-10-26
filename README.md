@@ -24,4 +24,4 @@ Sign up for the thing, click the things.
 * Do some of the things!
 * Write gr8 code!
 * Be nice to each other!
-* Okay great!
+* OKAYGREAT! -Hunter
