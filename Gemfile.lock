@@ -39,9 +39,17 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    awesome_print (1.7.0)
     bcrypt (3.1.11)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.6)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -59,9 +67,13 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.6.6)
+      i18n (~> 0.5)
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -166,9 +178,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
+  better_errors
+  binding_of_caller
   byebug
   coffee-rails (~> 4.2)
   devise
+  faker
+  haml
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
