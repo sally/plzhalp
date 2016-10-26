@@ -3,4 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  validates :first_name, :last_name, :role, presence: true
+
+  # implement (if not in the User model, user helper) a way to write the 'role' attribute as 'mentor' or 'student' depending on user choice upon registration
 end
