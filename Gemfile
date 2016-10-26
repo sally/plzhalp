@@ -48,5 +48,20 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+  ######################
+ # NON-RAILS-NEW GEMS #
+######################
+
 # Use devise for user auth
 gem 'devise'
+
+# Haml (HTML abstraction markup language) for ease of view writing/reading/editing
+gem 'haml'
+
+# Faker for seeding data SQUIRTLE
+gem 'faker' 
+
+# Formatters for ease of debugging
+gem 'awesome_print'
+gem 'better_errors'
+gem 'binding_of_caller'
