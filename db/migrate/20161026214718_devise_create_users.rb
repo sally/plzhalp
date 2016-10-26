@@ -5,6 +5,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      ### Additions made for plzhalp users
+      t.string :first_name,         null: false, default: ""
+      t.string :last_name,          null: false, default: ""
+      t.string :picture_url,                     default: ""
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
