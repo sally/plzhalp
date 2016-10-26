@@ -65,3 +65,6 @@ gem 'faker'
 gem 'awesome_print'
 gem 'better_errors'
 gem 'binding_of_caller'
+
+# Bootstrap sass gems
+gem 'bootstrap-sass', '~> 3.3.6'
