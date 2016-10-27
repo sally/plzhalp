@@ -1,0 +1,8 @@
+%h1 Create new appointment
+- form_for @appointment do |f|
+  Date: #{f.date_select :date}
+  Start Time: #{f.datetime_select :start_time}
+  End Time: #{f.datetime_select :end_time}
+
+
+why

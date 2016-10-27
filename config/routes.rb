@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # get 'dashboard#index'
   # resources :dashboards
   get '/dashboard', to: 'index#dashboard'
+  resources :appointments
 end

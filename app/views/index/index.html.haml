@@ -1,10 +1,13 @@
 - if current_user
-  = render(:partial => '/layouts/login')
-  %h2 Welcome
-  %h1 Upcoming Appointments
+  %h1
+    Welcome #{current_user.first_name}
+  %h2 Upcoming Appointments
   - @upcoming_appointments.each do |appointment|
     Date:
     = appointment.formatted_date
+    - if student?
+      %a{:href => "#"} Cancel
+    %br/
     Time:
     = appointment.formatted_start_time
     \-
@@ -19,9 +22,14 @@
 - else
   = render(:partial => '/layouts/login_form')
 
+- if current_user
+  - if mentor?
+    /\#{button_to "Create Appointment", { :action => "new" }, :method => :get}
+    \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path}
+
 -if current_user
   %h1 SUPS
-  %h1 Available Appointments
+  %h2 Available Appointments
   - @appointments.each do |appointment|
     Date:
     = appointment.formatted_date

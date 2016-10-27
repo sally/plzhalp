@@ -1,4 +1,5 @@
 %h3 devbootcamp
 %h3#logo plzhalp
 
-= render(:partial => 'layouts/login')
+- if current_user
+  = render(:partial => 'layouts/login')
