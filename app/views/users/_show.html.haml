@@ -37,3 +37,9 @@
   %div
     Phase:
     = Student.find_by(user: @user).phase.number
+
+%object{:height => "0", :width => "0"}
+  %param{:name => "movie", :value => "http://www.youtube.com/v/d9TpRfDdyU0?fs=1&hl=en_US&rel=0"}
+  %param{:name => "allowFullScreen", :value => "true"}
+  %param{:name => "allowscriptaccess", :value => "always"}
+  %embed{:allowfullscreen => "true", :allowscriptaccess => "always", :height => "390", :src => "http://www.youtube.com/v/d9TpRfDdyU0?fs=1&hl=en_US&rel=0", :type => "application/x-shockwave-flash", :width => "640"}
