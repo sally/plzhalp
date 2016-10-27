@@ -1,0 +1,8 @@
+%h3 devbootcamp
+%h3 plzhalp
+
+/ cant figure out how to put in pipes
+%div
+  %a{:href => "/users/sign_up"} register .
+  %a{:href => "/users/sign_in"} login .
+  = link_to 'logout', destroy_user_session_path, method: :delete
