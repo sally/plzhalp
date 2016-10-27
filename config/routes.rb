@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   root 'index#index'
 
   # resources :user
+  # get 'dashboard#index'
+  # resources :dashboards
+  get '/dashboard', to: 'index#dashboard'
 end

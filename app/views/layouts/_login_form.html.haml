@@ -1,7 +1,7 @@
 #login-form-container
   #login-form
     %h2 Log in
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_for(resource, as: resource_name, url: dashboard_path(resource_name), method: :get) do |f|
       .field
         = f.label :email
         %br/
