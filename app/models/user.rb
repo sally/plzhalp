@@ -11,4 +11,12 @@ class User < ApplicationRecord
   def full_name
     first_name + " " + last_name
   end
+
+  def role_obj
+    if Mentor.find_by(user: self)
+      Mentor.find_by(user: self)
+    else
+      Student.find_by(user: self)
+    end
+  end
 end

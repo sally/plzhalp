@@ -1,1 +1,17 @@
 = render 'show'
+
+%h2
+  Past Appointments
+%div
+- @user.role_obj.past_appointments.each do |appointment|
+  Date:
+  = appointment.formatted_date
+  %br/
+  Time:
+  = appointment.formatted_start_time
+  \-
+  = appointment.formatted_end_time
+  w/
+  %a{:href => "#"}= appointment.mentor.first_name
+  %br/
+  %br/

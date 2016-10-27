@@ -42,4 +42,12 @@ class Mentor < ApplicationRecord
 
     topic_array.compact
   end
+
+  def past_appointments
+    appointments.where('end_time < ?', Time.now)
+  end
+
+  def pending_appointments
+    appointments.where('start_time' > ?', Time.now)
+  end
 end
