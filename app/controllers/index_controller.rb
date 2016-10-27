@@ -2,10 +2,11 @@ class IndexController < ApplicationController
   # layout false
   # index page doesnt need header partial
   def index
+    @appointments = Appointment.all
+    render 'index/index'
   end
 
   def dashboard
-    @appointments = Appointment.all
-    render 'index/dashboard'
+
   end
 end

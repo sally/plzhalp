@@ -1,5 +1,24 @@
 - if current_user
+  = render(:partial => '/layouts/login')
   %h2 Welcome
+  %h1 Upcoming Appointments
+- else
+  = render(:partial => '/layouts/login_form')
 
-%h1 views/index/index.html.haml
-= render(:partial => '/layouts/login_form')
+-if current_user
+  %h1 SUPS
+  %h1 Available Appointments
+  - @appointments.each do |appointment|
+    Date:
+    = appointment.formatted_date
+    - if student?
+      %a{:href => "#"} Book now
+    %br/
+    Time:
+    = appointment.formatted_start_time
+    \-
+    = appointment.formatted_end_time
+    w/
+    %a{:href => "#"}= appointment.mentor.first_name
+    %br/
+    %br/
