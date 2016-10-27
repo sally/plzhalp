@@ -15,6 +15,10 @@ class Student < ApplicationRecord
     user.last_name
   end
 
+  def full_name
+    first_name + " " + last_name
+  end
+
   def email
     user.email
   end
@@ -25,5 +29,13 @@ class Student < ApplicationRecord
 
   def picture_url
     user.picture_url
+  end
+
+  def past_appointments
+    appointments.where('end_time < ?', Time.now)
+  end
+
+  def pending_appointments
+    appointments.where('start_time' > ?', Time.now)
   end
 end
