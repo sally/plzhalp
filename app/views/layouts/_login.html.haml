@@ -1,0 +1,8 @@
+- if !current_user
+  %div
+    %a{:href => "/users/sign_up"} register
+    %a{:href => "/users/sign_in"} | login
+- else
+  %div
+    %a{:href => "#" } profile
+    = link_to '| logout', destroy_user_session_path, method: :delete
