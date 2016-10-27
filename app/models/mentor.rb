@@ -18,12 +18,16 @@ class Mentor < ApplicationRecord
   def email
     user.email
   end
-
+ 
   def role
     user.role
   end
 
   def picture_url
     user.picture_url
+  end
+
+  def total_completed_appointments
+    appointments.where('end_time < ?', Time.now).count
   end
 end

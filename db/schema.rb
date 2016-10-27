@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20161026215237) do
     t.integer  "mentor_id"
     t.integer  "student_id"
     t.date     "date",       null: false
-    t.time     "start_time", null: false
-    t.time     "end_time",   null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mentor_id"], name: "index_appointments_on_mentor_id", using: :btree
