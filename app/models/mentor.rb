@@ -15,6 +15,10 @@ class Mentor < ApplicationRecord
     user.last_name
   end
 
+  def full_name
+    first_name + " " + last_name
+  end
+
   def email
     user.email
   end
@@ -29,5 +33,21 @@ class Mentor < ApplicationRecord
 
   def total_completed_appointments
     appointments.where('end_time < ?', Time.now).count
+  end
+
+  def phase_strengths(number)
+    topic_array = strengths.pluck(:topic_id).map do |id|
+      Topic.find(id).name if Topic.find(id).phase.number == number
+    end
+
+    topic_array.compact
+  end
+
+  def past_appointments
+    appointments.where('end_time < ?', Time.now)
+  end
+
+  def pending_appointments
+    appointments.where('start_time' > ?', Time.now)
   end
 end

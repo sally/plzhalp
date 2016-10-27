@@ -1,0 +1,20 @@
+= render 'show'
+
+%h2
+  Past Appointments
+%div
+- @user.role_obj.past_appointments.each do |appointment|
+  Date:
+  = appointment.formatted_date
+  - if student?
+    %a{:href => '#'} Give Feedback
+  %br/
+  Time:
+  = appointment.formatted_start_time
+  \-
+  = appointment.formatted_end_time
+  w/
+  = link_to appointment.mentor.first_name, '#', {'data-toggle' =>  "modal", 'data-target' => '#myModal'}
+  %br/
+  %br/
+
