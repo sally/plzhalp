@@ -23,6 +23,8 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <!-- if mentor, show mentor fields -->
+
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
