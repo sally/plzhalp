@@ -6,4 +6,16 @@ class Appointment < ApplicationRecord
   belongs_to :student
 
   has_many :student_feedbacks
+
+  def formatted_start_time
+    start_time.strftime("%H" + ":" + "%M")
+  end
+
+  def formatted_end_time
+    end_time.strftime("%H" + ":" + "%M")
+  end
+
+  def formatted_date
+    date.to_s
+  end
 end
