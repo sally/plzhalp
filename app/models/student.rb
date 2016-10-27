@@ -15,6 +15,10 @@ class Student < ApplicationRecord
     user.last_name
   end
 
+  def full_name
+    first_name + " " + last_name
+  end
+
   def email
     user.email
   end
