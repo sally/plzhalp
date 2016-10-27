@@ -2,6 +2,20 @@
   = render(:partial => '/layouts/login')
   %h2 Welcome
   %h1 Upcoming Appointments
+  - @upcoming_appointments.each do |appointment|
+    Date:
+    = appointment.formatted_date
+    Time:
+    = appointment.formatted_start_time
+    \-
+    = appointment.formatted_end_time
+    w/
+    - if student?
+      %a{:href => "#"}= appointment.mentor.first_name
+    - else
+      %a{:href => "#"}= appointment.student.first_name
+    %br/
+    %br/
 - else
   = render(:partial => '/layouts/login_form')
 
