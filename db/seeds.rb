@@ -37,7 +37,7 @@ phase3topics = [
 
 # Default mentor for testing. Log in with m@m.m, password mmmmmm
 m_user = User.create(email: 'm@m.m', password: 'mmmmmm', password_confirmation: 'mmmmmm', first_name: 'Matthew', last_name: 'Mentor', role: 'mentor')
-m = Mentor.create(user: m)
+m = Mentor.create(user: m_user)
 Strength.create(mentor: m, topic: phase1topics[0])
 Strength.create(mentor: m, topic: phase1topics[2])
 Strength.create(mentor: m, topic: phase1topics[4])

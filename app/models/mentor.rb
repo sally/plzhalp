@@ -34,4 +34,12 @@ class Mentor < ApplicationRecord
   def total_completed_appointments
     appointments.where('end_time < ?', Time.now).count
   end
+
+  def phase_strengths(number)
+    topic_array = strengths.pluck(:topic_id).map do |id|
+      Topic.find(id).name if Topic.find(id).phase.number == number
+    end
+
+    topic_array.compact
+  end
 end
