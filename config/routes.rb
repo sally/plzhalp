@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'index#dashboard'
   resources :appointments
   resources :users, only: [:show]
-
-  get '/show_partial', to: 'users#show_partial'
 end
