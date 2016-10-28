@@ -1,0 +1,6 @@
+%h1 Give Feedback
+
+= form_for @student_feedback, :url => appointment_student_feedbacks_path do |f|
+  #{f.text_area :body, size: "35x6",placeholder: "Please leave some ASK feedback for your mentor. :D"}
+  %br/
+  \#{f.submit}

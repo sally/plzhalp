@@ -19,5 +19,9 @@
   - else
     %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
   %br/
+  - if appointment.student_feedbacks
+    Feedback: 
+    = appointment.student_feedbacks.first.body
   %br/
-
+  %br/
+  
