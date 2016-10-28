@@ -2,7 +2,7 @@ class IndexController < ApplicationController
   # layout false
   # index page doesnt need header partial
   def index
-    @available_appointments = Appointment.where(student_id: nil)
+    @available_appointments = Appointment.where(student_id: nil).where('start_time > ?', Time.now)
     if current_user
       if current_user.role == 'mentor'
         @mentor = Mentor.find_by(user_id: current_user.id)
