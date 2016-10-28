@@ -147,14 +147,8 @@ a2 = Appointment.create(
   start_time: '2016-10-25 11:30',
   end_time: '2016-10-25 12:00')
 
-StudentFeedback.create(
-  appointment: a2,
-  body: 'Learned a lot. Could have gone at a more steady pace.'
-  )
-
 a3 = Appointment.create(
   mentor: m1,
-  student: s4,
   date: '2016-10-29',
   start_time: '2016-10-29 10:00',
   end_time: '2016-10-29 10:30')
@@ -185,11 +179,6 @@ a6 = Appointment.create(
   start_time: '2016-10-26 18:00',
   end_time: '2016-10-26 18:30')
 
-StudentFeedback.create(
-  appointment: a6,
-  body: 'Learned a lot. Could have gone at a more steady pace.'
-  )
-
 a7 = Appointment.create(
   mentor: m2,
   student: s7,
@@ -200,7 +189,6 @@ a7 = Appointment.create(
 a8 = Appointment.create(
   mentor: m2,
   student: s8,
-  date: '2016-10-29',
   start_time: '2016-10-29 16:00',
   end_time: '2016-10-29 16:30')
 
@@ -223,14 +211,8 @@ a10 = Appointment.create(
   start_time: '2016-10-26 13:00',
   end_time: '2016-10-26 13:30')
 
-StudentFeedback.create(
-  appointment: a10,
-  body: 'Learned a lot. Could have gone at a more steady pace.'
-  )
-
 a11 = Appointment.create(
   mentor: m3,
-  student: s11,
   date: '2016-10-29',
   start_time: '2016-10-29 11:00',
   end_time: '2016-10-29 11:30')
@@ -261,11 +243,6 @@ a14 = Appointment.create(
   start_time: '2016-10-25 16:00',
   end_time: '2016-10-25 16:30')
 
-StudentFeedback.create(
-  appointment: a14,
-  body: 'Learned a lot. Could have gone at a more steady pace.'
-  )
-
 a15 = Appointment.create(
   mentor: m5,
   student: s3,
@@ -275,7 +252,6 @@ a15 = Appointment.create(
 
 a16 = Appointment.create(
   mentor: m5,
-  student: s4,
   date: '2016-10-31',
   start_time: '2016-10-31 14:30',
   end_time: '2016-10-31 15:00')
