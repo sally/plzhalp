@@ -10,37 +10,48 @@
 
     %div
       %span
-        Role: 
+        %i.fa.fa-user-o.fa-fw
         = @user.role
 
     %div
       %span
-        Email: 
+        %i.fa.fa-envelope-o.fa-fw
         = @user.email
+
+    %br/
 
     - if @user.role == "mentor"
       %div
+        %i.fa.fa-thumbs-o-up.fa-fw
         Strengths:
-        %div
+        %div.phase-strength
+        %i.fa.fa-caret-right.fa-fw
         Phase 1:
         - Mentor.find_by(user: @user).phase_strengths(1).each do |strength|
-          %span
+          %span.strength
             = strength
-        %div
+        %div.phase-strength
+        %i.fa.fa-caret-right.fa-fw
         Phase 2:
         - Mentor.find_by(user: @user).phase_strengths(2).each do |strength|
-          %span
+          %span.strength
             = strength
-        %div
+        %div.phase-strength
+        %i.fa.fa-caret-right.fa-fw
         Phase 3:
         - Mentor.find_by(user: @user).phase_strengths(3).each do |strength|
-          %span
+          %span.strength
             = strength
+
+      %br/
+
       %div
+        %i.fa.fa-bar-chart.fa-fw
         Total Sessions Completed:
         = Mentor.find_by(user: @user).total_completed_appointments
 
     - if @user.role == "student"
       %div
-        Phase:
+        %i.fa.fa-tasks.fa-fw
+        Phase
         = Student.find_by(user: @user).phase.number
