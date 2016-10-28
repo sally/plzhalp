@@ -11,12 +11,24 @@
   <style>
     <% if current_user %>
       <% if mentor? %>
-        header, .strength{background-color: #859C9E;}
+        header, .strength{
+          background-color: #859C9E;
+        }
+        .card{
+          border: 1px solid #859C9E;
+        }
       <% else %>
-        header, .strength{background-color: #82D0D9;}
+        header, .strength{
+          background-color: #82D0D9;
+        }
+        .card{
+          border: 1px solid #82D0D9;
+        }
       <% end %>
     <% else %>
-      header{background-color: #262929;}
+      header{
+        background-color: #262929;
+      }
     <% end %>
   </style>
   <header><%= render 'layouts/header' %></header>

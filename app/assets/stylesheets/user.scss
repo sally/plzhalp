@@ -7,6 +7,45 @@
    align-items: center;
    -webkit-justify-content: center;
    justify-content: center;
+
+   /* to bring modal container down from touching header */
+   padding-top: 1em;
+}
+
+.show-appts-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-appts-container h3{
+  /*text-decoration: underline;*/
+}
+
+.show-upcoming-appts-container{
+  min-width: 48%;
+/*  display: flex;
+  align-items: center;
+  flex-direction: column;*/
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-align-items: flex-end;
+   align-items: flex-end;
+}
+
+.show-past-appts-container{
+  max-width: 48%;
+  margin-left: 1em;
+/*  display: flex;
+  align-items: center;
+  flex-direction: column;*/
+    display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
 }
 
 .modal-container{
@@ -14,6 +53,10 @@
    display: flex;
    -webkit-flex-direction: row;
    flex-direction: row;
+}
+
+.prof-pic-container img{
+  border-radius: 50%;
 }
 
 .prof-info-container{
@@ -34,3 +77,23 @@
   margin-left: 2px;
   margin-right: 2px;
 }
+
+/* card styles */
+.card{
+  border-radius: 7.5px;
+  margin-bottom: 1em;
+  max-width: 50%;
+  padding: .5em;
+}
+
+.show-upcoming-appts-container .card{
+  min-width: 40%;
+}
+
+.show-past-appts-container .card{
+  width: 50%;
+}
+
+/*.debug{
+  border: 1px solid red;
+}*/
