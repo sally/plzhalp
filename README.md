@@ -9,7 +9,7 @@ A scheduling app for DBC mentors and students to get one-on-one instructional ti
 * [Christopher Chan](http://www.github.com/christopherchan35) aka Kristoff
 * [Jeffrey Lee](http://www.github.com/jlee22) aka El Jefe
 * [Paula Lee](http://www.github.com/pdlee877) aka Paula da Balla HOLLA
-* [Young Ju Park](http://www.github.com/parkyngj)
+* [Young Ju Park](http://www.github.com/parkyngj) aka Sally Parkour
 
 ## Installing Locally
 
