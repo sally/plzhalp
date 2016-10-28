@@ -48,6 +48,6 @@ class Mentor < ApplicationRecord
   end
 
   def pending_appointments
-    appointments.where('start_time' > ?', Time.now)
+    appointments.where('start_time > ?', Time.now)
   end
 end
