@@ -9,45 +9,47 @@
       .col-sm-4
         %h2.side2 Upcoming Appointments
         - if mentor?
-          \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path, class: "side2"}
+          \#{link_to 'Create Appointment'.html_safe, new_appointment_path, class: "side2 btn btn-primary"}
           %br/
           %br/
         - @upcoming_appointments.each do |appointment|
-          %i.fa.fa-calendar.fa-fw
-          = appointment.formatted_date
-          - if student?
-            %a{:href => "#"} Cancel
-          %br/
-          %i.fa.fa-clock-o.fa-fw
-          = appointment.formatted_start_time
-          \-
-          = appointment.formatted_end_time
-          w/
-          - if student?
-            %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
-          - else
-            %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.student.user.id}-profile", :class => "profile-modal-link"} #{appointment.student.first_name}
-          %br/
-          %br/
-
-      .col-sm-8
-        -if current_user
-          %h2 Available Appointments
-          - @available_appointments.each do |appointment|
+          .card.card-block
             %i.fa.fa-calendar.fa-fw
             = appointment.formatted_date
             - if student?
-              /%a{:href => edit_appointment_path} Book now
-              = link_to 'Book Now', appointment_path(appointment), method: :put
+              %a{:href => "#"} Cancel
             %br/
             %i.fa.fa-clock-o.fa-fw
             = appointment.formatted_start_time
             \-
             = appointment.formatted_end_time
             w/
-            %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
+            - if student?
+              %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
+            - else
+              %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.student.user.id}-profile", :class => "profile-modal-link"} #{appointment.student.first_name}
             %br/
             %br/
+
+      .col-sm-8
+        -if current_user
+          %h2 Available Appointments
+          - @available_appointments.each do |appointment|
+            .card.card-block
+              %i.fa.fa-calendar.fa-fw
+              = appointment.formatted_date
+              - if student?
+                /%a{:href => edit_appointment_path} Book now
+                = link_to 'Book Now', appointment_path(appointment), method: :put
+              %br/
+              %i.fa.fa-clock-o.fa-fw
+              = appointment.formatted_start_time
+              \-
+              = appointment.formatted_end_time
+              %br/
+              %i.fa.fa-user-circle-o.fa-fw
+              %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
+
 
   - else
     = render(:partial => '/layouts/login_form')
