@@ -26,19 +26,19 @@
         Strengths:
         %div.phase-strength
         %i.fa.fa-caret-right.fa-fw
-        Phase 1:
+        Phase 1
         - Mentor.find_by(user: @user).phase_strengths(1).each do |strength|
           %span.strength
             = strength
         %div.phase-strength
         %i.fa.fa-caret-right.fa-fw
-        Phase 2:
+        Phase 2
         - Mentor.find_by(user: @user).phase_strengths(2).each do |strength|
           %span.strength
             = strength
         %div.phase-strength
         %i.fa.fa-caret-right.fa-fw
-        Phase 3:
+        Phase 3
         - Mentor.find_by(user: @user).phase_strengths(3).each do |strength|
           %span.strength
             = strength

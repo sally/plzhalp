@@ -8,15 +8,15 @@
         %h2 Upcoming Appointments
         - if mentor?
           \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path}
-        %br/
-        %br/
+          %br/
+          %br/
         - @upcoming_appointments.each do |appointment|
-          Date:
+          %i.fa.fa-calendar.fa-fw
           = appointment.formatted_date
           - if student?
             %a{:href => "#"} Cancel
           %br/
-          Time:
+          %i.fa.fa-clock-o.fa-fw
           = appointment.formatted_start_time
           \-
           = appointment.formatted_end_time
@@ -32,13 +32,13 @@
         -if current_user
           %h2 Available Appointments
           - @available_appointments.each do |appointment|
-            Date:
+            %i.fa.fa-calendar.fa-fw
             = appointment.formatted_date
             - if student?
               /%a{:href => edit_appointment_path} Book now
               = link_to 'Book Now', appointment_path(appointment), method: :put
             %br/
-            Time:
+            %i.fa.fa-clock-o.fa-fw
             = appointment.formatted_start_time
             \-
             = appointment.formatted_end_time

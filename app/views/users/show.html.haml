@@ -6,12 +6,12 @@
       Past Appointments
     %div
     - @user.role_obj.past_appointments.each do |appointment|
-      Date:
+      %i.fa.fa-calendar.fa-fw
       = appointment.formatted_date
       - if student? && appointment.student_feedbacks.empty?
         = link_to 'Give Feedback', new_appointment_student_feedback_path(appointment)
       %br/
-      Time:
+      %i.fa.fa-clock-o.fa-fw
       = appointment.formatted_start_time
       \-
       = appointment.formatted_end_time
