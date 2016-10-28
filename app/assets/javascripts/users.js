@@ -21,5 +21,4 @@ $(document).ready(function(){
     // and then pop the modal out, target the ID 
     })
   })
-
 })
