@@ -68,3 +68,6 @@ gem 'binding_of_caller'
 
 # Bootstrap sass gems
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# Turbolinks interferes with jQuery, blocking doc ready from exsecuting. Here's the fix
+gem 'jquery-turbolinks'

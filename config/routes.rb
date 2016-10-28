@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'index#dashboard'
   resources :appointments
   resources :users, only: [:show]
+
+  resources :appointments do
+    resources :student_feedbacks, only: [:new, :create, :show]
+  end
 end
