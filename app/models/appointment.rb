@@ -1,4 +1,6 @@
 class Appointment < ApplicationRecord
+  scope :recent, -> { order("date ASC, start_time ASC").limit(5) }
+
   validates :mentor, :date, :start_time, :end_time, presence: true
   validates :mentor, uniqueness: { scope: [:date, :start_time] }
 

@@ -1,13 +1,15 @@
 .index-container
   - if current_user
-    %h1
+    %h1.side1
+      %i.fa.fa-code{"aria-hidden" => "true"}
       Welcome, #{current_user.first_name}
+      %hr.style1/
     .container
     .row
       .col-sm-4
-        %h2 Upcoming Appointments
+        %h2.side2 Upcoming Appointments
         - if mentor?
-          \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path}
+          \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path, class: "side2"}
           %br/
           %br/
         - @upcoming_appointments.each do |appointment|
@@ -27,7 +29,7 @@
             %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.student.user.id}-profile", :class => "profile-modal-link"} #{appointment.student.first_name}
           %br/
           %br/
-        
+
       .col-sm-8
         -if current_user
           %h2 Available Appointments
@@ -49,4 +51,3 @@
 
   - else
     = render(:partial => '/layouts/login_form')
-
