@@ -7,6 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <style>
+    <% if current_user %>
+      <% if mentor? %>
+        header{background-color: #859C9E;}
+      <% else %>
+        header{background-color: #82D0D9;}
+      <% end %>
+    <% else %>
+      header{background-color: #262929;}
+    <% end %>
+  </style>
   <header><%= render 'layouts/header' %></header>
   <body>
     <%= yield %>
