@@ -2,14 +2,19 @@ class IndexController < ApplicationController
   # layout false
   # index page doesnt need header partial
   def index
-    @available_appointments = Appointment.where(student_id: nil)
+    @available_appointments = Appointment.where(student_id: nil).where('start_time > ?', Time.now)
+    p "BEFORE"
+    p @available_appointments
+    @available_appointments = @available_appointments.recent
+    p "AFTER"
+    p @available_appointments
     if current_user
       if current_user.role == 'mentor'
         @mentor = Mentor.find_by(user_id: current_user.id)
-        @upcoming_appointments = @mentor.appointments.where.not(student_id: nil)
+        @upcoming_appointments = @mentor.pending_appointments
       elsif current_user.role == 'student'
         @student = Student.find_by(user_id: current_user.id)
-        @upcoming_appointments = @student.appointments
+        @upcoming_appointments = @student.pending_appointments
       end
     end
     render 'index/index'

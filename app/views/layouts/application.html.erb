@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Plzhalp</title>
+    <title>plzhalp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
   </head>
+  <style>
+    <% if current_user %>
+      <% if mentor? %>
+        header, .strength{background-color: #859C9E;}
+      <% else %>
+        header, .strength{background-color: #82D0D9;}
+      <% end %>
+    <% else %>
+      header{background-color: #262929;}
+    <% end %>
+  </style>
   <header><%= render 'layouts/header' %></header>
   <body>
     <%= yield %>
 
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="myModal" class="modal fade modal-wide" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">

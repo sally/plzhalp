@@ -5,7 +5,6 @@ class AppointmentsController < ApplicationController
 
   def edit
     @appointment = Appointment.find(params[:id])
-
   end
 
   def create

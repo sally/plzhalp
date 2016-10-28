@@ -1,6 +1,9 @@
-%h3 dbc
-%h3#logo
+%link{:href => "https://fonts.googleapis.com/css?family=Montserrat", :rel => "stylesheet"}/
+%div.header-left
+  %img{:src => "https://devbootcamp.com/assets/logos/logo-white-7cbfe7fa1f6720228d84282f85903245.svg", height: '14px', width: '85px'}
+%div.header-middle
   %a{:href => "/"} plzhalp
 
-- if current_user
-  = render(:partial => 'layouts/login')
+%div.header-right
+  - if current_user
+    = render(:partial => 'layouts/login')
