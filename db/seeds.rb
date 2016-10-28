@@ -49,7 +49,7 @@ Strength.create(mentor: m, topic: phase3topics[2])
 
 # Default student for testing. Log in with s@s.s, password ssssss
 s_user = User.create(email: 's@s.s', password: 'ssssss', password_confirmation: 'ssssss', first_name: 'Sybil', last_name: 'Student', role: 'student')
-s = Student.create(user:s, phase:phase2)
+s = Student.create(user:s_user, phase:phase2)
 
 # mentor users
 mu1 = User.create(email: 'm1@m.m', password: 'mmmmmm', password_confirmation: 'mmmmmm', first_name: 'Mark', last_name: 'Miller', role: 'mentor')
