@@ -32,7 +32,7 @@ class Mentor < ApplicationRecord
   end
 
   def total_completed_appointments
-    appointments.where('end_time < ?', Time.now).count
+    appointments.where('end_time < ?', Time.now).where.not(student_id:nil).count
   end
 
   def phase_strengths(number)
@@ -44,7 +44,7 @@ class Mentor < ApplicationRecord
   end
 
   def past_appointments
-    appointments.where('end_time < ?', Time.now)
+    appointments.where('end_time < ?', Time.now).where.not(student_id:nil)
   end
 
   def pending_appointments
