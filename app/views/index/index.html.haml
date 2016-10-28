@@ -24,11 +24,9 @@
 
 - if current_user
   - if mentor?
-    /\#{button_to "Create Appointment", { :action => "new" }, :method => :get}
     \#{link_to '<button type="button">Create Appointment</button>'.html_safe, new_appointment_path}
 
 -if current_user
-  %h1 SUPS
   %h2 Available Appointments
   - @available_appointments.each do |appointment|
     Date:
