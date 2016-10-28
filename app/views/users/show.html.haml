@@ -14,7 +14,7 @@
   \-
   = appointment.formatted_end_time
   w/
-  = link_to appointment.mentor.first_name, '#', {'data-toggle' =>  "modal", 'data-target' => '#myModal'}
+  %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile"} #{appointment.mentor.first_name}
   %br/
   %br/
 
