@@ -2,8 +2,7 @@ class IndexController < ApplicationController
   # layout false
   # index page doesnt need header partial
   def index
-    @appointments = Appointment.all
-    # p current_user
+    @available_appointments = Appointment.where(student_id: nil)
     if current_user
       if current_user.role == 'mentor'
         @mentor = Mentor.find_by(user_id: current_user.id)
@@ -14,9 +13,5 @@ class IndexController < ApplicationController
       end
     end
     render 'index/index'
-  end
-
-  def dashboard
-
   end
 end

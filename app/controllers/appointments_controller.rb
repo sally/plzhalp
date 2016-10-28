@@ -3,6 +3,11 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
   end
 
+  def edit
+    @appointment = Appointment.find(params[:id])
+
+  end
+
   def create
     if current_user.role == "mentor"
       # Make a new appointment using the params
@@ -20,8 +25,20 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def update
+    @appointment = Appointment.find(params[:id])
+    @student = Student.find_by(user_id: current_user.id)
+    @appointment.student_id = @student.id
+    # @appointment.update(appointment_params)
+    @appointment.save
+    redirect_to '/'
+  end
+
+  def destroy
+  end
+
   private
   def appointment_params
-    params.require(:appointment).permit(:mentor_id, :date, :start_time, :end_time)
+    params.require(:appointment).permit(:mentor_id, :student_id, :date, :start_time, :end_time)
   end
 end
