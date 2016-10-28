@@ -7,7 +7,7 @@
   Date:
   = appointment.formatted_date
   - if student?
-    %a{:href => '#'} Give Feedback
+    = link_to 'Give Feedback', new_appointment_student_feedback_path(appointment)
   %br/
   Time:
   = appointment.formatted_start_time
