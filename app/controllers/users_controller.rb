@@ -6,4 +6,10 @@ class UsersController < ApplicationController
       redirect_to '/404'
     end
   end
+
+  def show_partial
+    p "*********************"
+    p "HERRO?"
+    render :layout => false, :file=>'app/views/users/_show'
+  end
 end

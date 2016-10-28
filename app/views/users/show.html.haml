@@ -1,5 +1,8 @@
 = render 'show'
 
+%h3
+  Yo
+
 %h2
   Past Appointments
 %div
@@ -14,7 +17,10 @@
   \-
   = appointment.formatted_end_time
   w/
-  %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile"} #{appointment.mentor.first_name}
+  - if mentor?
+    %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.student.user.id}-profile", :class => "profile-modal-link"} #{appointment.student.first_name}
+  - else
+    %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
   %br/
   %br/
 

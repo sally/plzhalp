@@ -1,39 +1,41 @@
-%div
-  %span
-    %h2
-      = @user.full_name
+HI
 
-%div
-  %span
-    = @user.role
+/ %div
+/   %span
+/     %h2
+/       = @user.full_name
 
-%div
-  %span
-    = @user.email
+/ %div
+/   %span
+/     = @user.role
 
-- if @user.role == "mentor"
-  %div
-    Strengths:
-    %div
-    Phase 1:
-    - Mentor.find_by(user: @user).phase_strengths(1).each do |strength|
-      %span
-        = strength
-    %div
-    Phase 2:
-    - Mentor.find_by(user: @user).phase_strengths(2).each do |strength|
-      %span
-        = strength
-    %div
-    Phase 3:
-    - Mentor.find_by(user: @user).phase_strengths(3).each do |strength|
-      %span
-        = strength
-  %div
-    Total Sessions Completed:
-    = Mentor.find_by(user: @user).total_completed_appointments
+/ %div
+/   %span
+/     = @user.email
 
-- if @user.role == "student"
-  %div
-    Phase:
-    = Student.find_by(user: @user).phase.number
+/ - if @user.role == "mentor"
+/   %div
+/     Strengths:
+/     %div
+/     Phase 1:
+/     - Mentor.find_by(user: @user).phase_strengths(1).each do |strength|
+/       %span
+/         = strength
+/     %div
+/     Phase 2:
+/     - Mentor.find_by(user: @user).phase_strengths(2).each do |strength|
+/       %span
+/         = strength
+/     %div
+/     Phase 3:
+/     - Mentor.find_by(user: @user).phase_strengths(3).each do |strength|
+/       %span
+/         = strength
+/   %div
+/     Total Sessions Completed:
+/     = Mentor.find_by(user: @user).total_completed_appointments
+
+/ - if @user.role == "student"
+/   %div
+/     Phase:
+/     = Student.find_by(user: @user).phase.number
