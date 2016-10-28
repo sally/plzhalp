@@ -30,11 +30,12 @@
 -if current_user
   %h1 SUPS
   %h2 Available Appointments
-  - @appointments.each do |appointment|
+  - @available_appointments.each do |appointment|
     Date:
     = appointment.formatted_date
     - if student?
-      %a{:href => "#"} Book now
+      /%a{:href => edit_appointment_path} Book now
+      = link_to 'Book Now', appointment_path(appointment), method: :put
     %br/
     Time:
     = appointment.formatted_start_time
