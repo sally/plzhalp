@@ -1,0 +1,36 @@
+.show-container{
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.modal-container{
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+}
+
+.prof-info-container{
+  margin-left: .5em;
+}
+
+.phase-strength{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.strength{
+  background-color:#262929;
+  color: #fff;
+  font-size: .9em;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 2px;
+  margin-right: 2px;
+}

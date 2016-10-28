@@ -6,3 +6,12 @@ body{
   margin: 0;
   padding: 0;
 }
+
+.modal.modal-wide .modal-dialog {
+  max-width: 50%;
+  width: auto;
+  min-width: 30%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
