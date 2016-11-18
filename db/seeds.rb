@@ -190,9 +190,9 @@ s12 = Student.create(user: su12, phase: phase3)
 appointment0 = Appointment.create(
   mentor: m1,
   student: s,
-  date: '2016-10-23',
-  start_time: '2016-10-23 14:30',
-  end_time: '2016-10-23 15:00'
+  date: '2016-11-13',
+  start_time: '2016-11-13 14:30',
+  end_time: '2016-11-13 15:00'
   )
 
 StudentFeedback.create(
@@ -203,9 +203,9 @@ StudentFeedback.create(
 appointment1 = Appointment.create(
   mentor: m2,
   student: s,
-  date: '2016-10-24',
-  start_time: '2016-10-24 11:00',
-  end_time: '2016-10-24 11:30'
+  date: '2016-11-14',
+  start_time: '2016-11-14 11:00',
+  end_time: '2016-11-14 11:30'
   )
 
 StudentFeedback.create(
@@ -217,26 +217,26 @@ StudentFeedback.create(
 appointment2 = Appointment.create(
   mentor: m,
   student: s,
-  date: '2016-10-25',
-  start_time: '2016-10-25 17:30',
-  end_time: '2016-10-25 18:00'
+  date: '2016-11-15',
+  start_time: '2016-11-15 17:30',
+  end_time: '2016-11-15 18:00'
   )
 
 #Sybil student's future appointment that she will book with Mia Mentor
 appointment3 = Appointment.create(
   mentor: m,
-  date: '2016-10-31',
-  start_time: '2016-10-31 17:30',
-  end_time: '2016-10-31 18:00'
+  date: '2016-11-20',
+  start_time: '2016-11-20 17:30',
+  end_time: '2016-11-20 18:00'
   )
 
 # appointments
 a1 = Appointment.create(
   mentor: m1,
   student: s1,
-  date: '2016-10-24',
-  start_time: '2016-10-24 14:30',
-  end_time: '2016-10-24 15:00')
+  date: '2016-11-14',
+  start_time: '2016-11-14 14:30',
+  end_time: '2016-11-14 15:00')
 
 StudentFeedback.create(
   appointment: a1,
@@ -246,29 +246,29 @@ StudentFeedback.create(
 a2 = Appointment.create(
   mentor: m1,
   student: s2,
-  date: '2016-10-25',
-  start_time: '2016-10-25 11:30',
-  end_time: '2016-10-25 12:00')
+  date: '2016-11-15',
+  start_time: '2016-11-15 11:30',
+  end_time: '2016-11-15 12:00')
 
 a3 = Appointment.create(
   mentor: m1,
-  date: '2016-10-29',
-  start_time: '2016-10-29 10:00',
-  end_time: '2016-10-29 10:30')
+  date: '2016-11-19',
+  start_time: '2016-11-19 10:00',
+  end_time: '2016-11-19 10:30')
 
 a4 = Appointment.create(
   mentor: m1,
   student: s3,
-  date: '2016-10-29',
-  start_time: '2016-10-29 16:00',
-  end_time: '2016-10-29 16:30')
+  date: '2016-11-19',
+  start_time: '2016-11-19 16:00',
+  end_time: '2016-11-19 16:30')
 
 a5 = Appointment.create(
   mentor: m2,
   student: s5,
-  date: '2016-10-26',
-  start_time: '2016-10-26 17:30',
-  end_time: '2016-10-26 18:00')
+  date: '2016-11-16',
+  start_time: '2016-11-16 17:30',
+  end_time: '2016-11-16 18:00')
 
 StudentFeedback.create(
   appointment: a5,
@@ -278,29 +278,29 @@ StudentFeedback.create(
 a6 = Appointment.create(
   mentor: m2,
   student: s6,
-  date: '2016-10-26',
-  start_time: '2016-10-26 18:00',
-  end_time: '2016-10-26 18:30')
+  date: '2016-11-16',
+  start_time: '2016-11-16 18:00',
+  end_time: '2016-11-16 18:30')
 
 a7 = Appointment.create(
   mentor: m2,
   student: s7,
-  date: '2016-10-29',
-  start_time: '2016-10-29 14:30',
-  end_time: '2016-10-29 15:00')
+  date: '2016-11-19',
+  start_time: '2016-11-19 14:30',
+  end_time: '2016-11-19 15:00')
 
 a8 = Appointment.create(
   mentor: m2,
   student: s8,
-  start_time: '2016-10-29 16:00',
-  end_time: '2016-10-29 16:30')
+  start_time: '2016-11-19 16:00',
+  end_time: '2016-11-19 16:30')
 
 a9 = Appointment.create(
   mentor: m3,
   student: s9,
-  date: '2016-10-25',
-  start_time: '2016-10-25 9:30',
-  end_time: '2016-10-25 10:30')
+  date: '2016-11-15',
+  start_time: '2016-11-15 9:30',
+  end_time: '2016-11-15 10:30')
 
 StudentFeedback.create(
   appointment: a9,
@@ -310,29 +310,29 @@ StudentFeedback.create(
 a10 = Appointment.create(
   mentor: m3,
   student: s10,
-  date: '2016-10-26',
-  start_time: '2016-10-26 13:00',
-  end_time: '2016-10-26 13:30')
+  date: '2016-11-16',
+  start_time: '2016-11-16 13:00',
+  end_time: '2016-11-16 13:30')
 
 a11 = Appointment.create(
   mentor: m3,
-  date: '2016-10-29',
-  start_time: '2016-10-29 11:00',
-  end_time: '2016-10-29 11:30')
+  date: '2016-11-19',
+  start_time: '2016-11-19 11:00',
+  end_time: '2016-11-19 11:30')
 
 a12 = Appointment.create(
   mentor: m4,
   student: s12,
-  date: '2016-10-30',
-  start_time: '2016-10-30 11:00',
-  end_time: '2016-10-30 11:30')
+  date: '2016-11-20',
+  start_time: '2016-11-20 11:00',
+  end_time: '2016-11-20 11:30')
 
 a13 = Appointment.create(
   mentor: m5,
   student: s1,
-  date: '2016-10-24',
-  start_time: '2016-10-24 10:00',
-  end_time: '2016-10-24 10:30')
+  date: '2016-11-14',
+  start_time: '2016-11-14 10:00',
+  end_time: '2016-11-14 10:30')
 
 StudentFeedback.create(
   appointment: a13,
@@ -342,19 +342,19 @@ StudentFeedback.create(
 a14 = Appointment.create(
   mentor: m5,
   student: s2,
-  date: '2016-10-25',
-  start_time: '2016-10-25 16:00',
-  end_time: '2016-10-25 16:30')
+  date: '2016-11-15',
+  start_time: '2016-11-15 16:00',
+  end_time: '2016-11-15 16:30')
 
 a15 = Appointment.create(
   mentor: m5,
   student: s3,
-  date: '2016-10-30',
-  start_time: '2016-10-30 14:00',
-  end_time: '2016-10-30 14:30')
+  date: '2016-11-20',
+  start_time: '2016-11-20 14:00',
+  end_time: '2016-11-20 14:30')
 
 a16 = Appointment.create(
   mentor: m5,
-  date: '2016-10-31',
-  start_time: '2016-10-31 14:30',
-  end_time: '2016-10-31 15:00')
+  date: '2016-11-20',
+  start_time: '2016-11-20 14:30',
+  end_time: '2016-11-20 15:00')
