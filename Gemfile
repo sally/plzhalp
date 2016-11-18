@@ -59,7 +59,7 @@ gem 'devise'
 gem 'haml'
 
 # Faker for seeding data SQUIRTLE
-gem 'faker' 
+gem 'faker'
 
 # Formatters for ease of debugging
 gem 'awesome_print'
@@ -71,3 +71,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # Turbolinks interferes with jQuery, blocking doc ready from exsecuting. Here's the fix
 gem 'jquery-turbolinks'
+
+# Simple Calendar: render a calendar
+gem "simple_calendar", "~> 2.0"
