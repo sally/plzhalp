@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
 
   $(".modal-wide").on("show.bs.modal", function() {
   var height = $(window).height() - 200;
@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 
   $(".profile-modal-link").on('click', function(event){
-  
+
   var profileModalLink = $(this);
 
   var numberPattern = /\d+/g;
@@ -23,7 +23,7 @@ $(document).ready(function(){
     console.log(response);
     $('.ajax-response-container').empty();
     $('.ajax-response-container').append(response);
-    // and then pop the modal out, target the ID 
+    // and then pop the modal out, target the ID
     })
   })
 })
