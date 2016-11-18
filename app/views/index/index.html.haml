@@ -5,15 +5,15 @@
       Welcome, #{current_user.first_name}
       %hr.style1/
     .container
-    .row
-      .col-sm-4
+    .index-row
+      .upcoming-appts
         %h2.side2 Upcoming Appointments
         - if mentor?
           \#{link_to 'Create Appointment'.html_safe, new_appointment_path, class: "side2 btn btn-primary"}
           %br/
           %br/
         - @upcoming_appointments.each do |appointment|
-          .card.card-block
+          .card.card-block.appt-card
             %i.fa.fa-calendar.fa-fw
             = appointment.formatted_date
             - if student?
@@ -31,11 +31,11 @@
             %br/
             %br/
 
-      .col-sm-8
+      .avail-appts
         -if current_user
           %h2 Available Appointments
           - @available_appointments.each do |appointment|
-            .card.card-block
+            .card.card-block.appt-card
               %i.fa.fa-calendar.fa-fw
               = appointment.formatted_date
               - if student?
@@ -50,6 +50,9 @@
               %i.fa.fa-user-circle-o.fa-fw
               %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#", :id => "#{appointment.mentor.user.id}-profile", :class => "profile-modal-link"} #{appointment.mentor.first_name}
 
+    .calendar-container
+      %h2 Calendar of Upcoming Appointments
+      = render 'calendar', :upcoming_appointments => @upcoming_appointments
 
   - else
     = render(:partial => '/layouts/login_form')

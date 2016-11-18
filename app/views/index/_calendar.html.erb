@@ -1,0 +1,15 @@
+<%= week_calendar number_of_weeks: 1, events: upcoming_appointments do |date, meetings| %>
+  <strong><%= date %></strong>
+  <Br><Br>
+  <% meetings.each do |meeting| %>
+    <div>
+      <p class="meeting"><%= meeting.formatted_start_time %> - <%= meeting.formatted_end_time %> w/
+      <% if student? %>
+        <%= meeting.mentor.first_name %>
+      <% else %>
+        <%= meeting.student.first_name %>
+      <% end %>
+    </p>
+    </div>
+  <% end %>
+<% end %>
