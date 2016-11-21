@@ -1,8 +1,15 @@
-# PlzHalp
+# [PlzHalp](http://plzhalp.herokuapp.com)
 
-## Description
+## The Problem
 
-A scheduling app for DBC mentors and students to get one-on-one instructional time.
+Students at DBC have trouble scheduling office hours with teachers to cover specific topics. Office hours are either fully booked or students are unable to find 1 on 1 time with a mentor.
+
+## The Solution
+
+PlzHalp is an easy to use calendar tool that allows teachers to create appointments at specific times. It uses profile data to help students select the appropriate mentor for their needs.
+
+## Screenshots
+![img](/public/plzhalpss.png 'k')
 
 ## Contributors
 
@@ -13,11 +20,17 @@ A scheduling app for DBC mentors and students to get one-on-one instructional ti
 
 ## Installing Locally
 
-Clone the thing, bundle install the thing, setup the thing, rails s the thing.
+* Clone the repo
+* `Bundle install` the gems
+* Create, Migrate, & Seed the database
+* Launch on localhost with `rails s`
 
 ## Using plzhalp
 
-Sign up for the thing, click the things.
+* Sample mentor account: `m@m.m`
+* Mentor password: `mmmmmm`
+* Sample student account: `s@s.s`
+* Student password: `ssssss`
 
 ## Team Goals
 
