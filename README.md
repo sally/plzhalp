@@ -20,10 +20,10 @@ PlzHalp is an easy to use calendar tool that allows teachers to create appointme
 
 ## Installing Locally
 
-* Clone the repo
-* `Bundle install` the gems
+* Clone the repo down locally
+* `bundle install` to install the gems
 * Create, Migrate, & Seed the database
-* Launch on localhost with `rails s`
+* Launch on `localhost:3000` with `rails s`
 
 ## Using plzhalp
 
@@ -31,6 +31,8 @@ PlzHalp is an easy to use calendar tool that allows teachers to create appointme
 * Mentor password: `mmmmmm`
 * Sample student account: `s@s.s`
 * Student password: `ssssss`
+
+* NOTE: If you'd like to view sample appointments, please roll back the local date on your computer to November 17th, 2016
 
 ## Team Goals
 
